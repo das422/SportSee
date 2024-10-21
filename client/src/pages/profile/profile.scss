@@ -1,0 +1,78 @@
+@import "../../sass/index.scss";
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  width: 100%;
+
+  @include md {
+    gap: 3rem;
+  }
+
+  &_title {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+      font-size: clamp(2.4rem, 4vw, 4.8rem);
+
+      span {
+        color: $color-red;
+      }
+    }
+
+    p {
+      font-size: clamp(1.6rem, 1.8vw, 1.8rem);
+    }
+  }
+
+  &_main {
+    display: flex;
+    height: 80vh;
+    max-height: 900px;
+    gap: 2rem;
+
+    @include md {
+      flex-direction: column-reverse;
+      height: auto;
+      max-height: unset;
+    }
+
+    &_charts {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 80%;
+
+      @include md {
+        width: 100%;
+      }
+
+      &_horizontal {
+        display: flex;
+        gap: 2rem;
+        height: 40%;
+        width: 100%;
+
+        @include md {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &_cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include md {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2rem;
+        width: 100%;
+      }
+    }
+  }
+}

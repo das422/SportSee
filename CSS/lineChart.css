@@ -1,0 +1,58 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+main {
+  margin-top: 10rem;
+  padding: 5rem 5rem 5rem 15rem;
+}
+@media screen and (max-width: 1500px) {
+  main {
+    padding: 4rem;
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+  }
+}
+@media screen and (max-width: 675px) {
+  main {
+    margin-bottom: 11rem;
+  }
+}
+
+.lineChart {
+  position: relative;
+  background-color: #FF0000;
+  border-radius: 0.5rem;
+}
+.lineChart_tooltip {
+  background-color: #fff;
+  padding: 1rem;
+}
+.lineChart_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=lineChart.css.map */

@@ -1,0 +1,121 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+main {
+  margin-top: 10rem;
+  padding: 5rem 5rem 5rem 15rem;
+}
+@media screen and (max-width: 1500px) {
+  main {
+    padding: 4rem;
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+  }
+}
+@media screen and (max-width: 675px) {
+  main {
+    margin-bottom: 11rem;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  min-height: calc(100vh - 100px);
+  width: 100px;
+  padding: 20px;
+}
+@media screen and (max-width: 1500px) {
+  .sidebar {
+    flex-direction: row;
+    z-index: 1000;
+    min-height: auto;
+    height: 100px;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 675px) {
+  .sidebar {
+    gap: 2rem;
+    text-align: center;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+}
+.sidebar_nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1500px) {
+  .sidebar_nav {
+    flex: unset;
+  }
+}
+.sidebar_nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (max-width: 1500px) {
+  .sidebar_nav ul {
+    flex-direction: row;
+  }
+}
+.sidebar_nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+.sidebar_footer {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+}
+@media screen and (max-width: 1500px) {
+  .sidebar_footer {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+  }
+}/*# sourceMappingURL=sidebar.css.map */
